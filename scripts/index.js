@@ -38,6 +38,7 @@ function playSound(e) {
   button.classList.add("playing");
   if (!keySoundMap[e.key]) return;
   const keySound = new Audio(keySoundMap[e.key]);
+  keySound.currentTime = 0;
   keySound.play();
 }
 
